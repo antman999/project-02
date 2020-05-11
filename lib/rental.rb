@@ -13,6 +13,10 @@ class Rental
         @@all
     end
 
-
+    def returned?
+        Rental.all.select do |v|
+           v.returned == "false"
+        end  
+    end
 
 end
