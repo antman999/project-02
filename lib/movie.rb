@@ -15,7 +15,7 @@ class Movie
     end
 
     def new_movie
-      Movie.new("back to the future 2",87,"Family")
+      self.new("back to the future 2",87,"Family")
     end
 
     # Get an array of all the rentals a certain Movie has
