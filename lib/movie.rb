@@ -38,6 +38,19 @@ class Movie
         end
       best.max
     end
+
+    def reviews
+        Review.all.select do |review|
+            review.movie == self
+        end
+    end
+
+    def critics
+        reviews.map do |review|
+            review.critic
+        end
+    end
+
 end
 
 # 
