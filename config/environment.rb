@@ -1,6 +1,5 @@
-require 'pry'
-require_relative "../lib/user"
-require_relative "../lib/movie"
-require_relative "../lib/rental"
-require_relative "../lib/review"
-require_relative "../lib/critic"
+require 'bundler'
+Bundler.require
+
+ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'db/development1.db')
+require_all 'lib'
